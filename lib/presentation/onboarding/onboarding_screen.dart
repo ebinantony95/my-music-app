@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_music_app/core/config/assets/app_constants.dart';
+import 'package:my_music_app/home.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -46,6 +47,7 @@ class OnboardingScreen extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.center,
                   child: Text(
+                    textAlign: TextAlign.center,
                     'Lorem ipsum dolor sit amet.consectetur adipiscing elit. Sagittis enim purus sed phasellus. Cursus ornare id scelerisque sed phasellus. Cursus ornar',
                     style: TextStyle(
                       fontWeight: FontWeight.normal,
@@ -55,6 +57,20 @@ class OnboardingScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(minimumSize: Size(300, 50)),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Home()),
+                  );
+                },
+                child: Text(
+                  'Get Started',
+                  style: TextStyle(fontFamily: 'satoshi', color: Colors.white),
+                ),
+              ),
+              SizedBox(height: 100),
             ],
           ),
         ],
