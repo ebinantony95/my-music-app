@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:my_music_app/core/config/theme/app_theme.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:my_music_app/presentation/choose%20mode/bloc/theme_cubit.dart';
 import 'package:my_music_app/presentation/splash/splash_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(BlocProvider(create: (_) => ThemeCubit(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -11,12 +12,16 @@ class MyApp extends StatelessWidget {
 
   // This widget is the root of your application.
   @override
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: AppTheme.lightTheme,
-      debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+    return BlocBuilder<ThemeCubit, ThemeData>(
+      builder: (context, theme) {
+        return MaterialApp(
+          title: 'Bloc Theming App',
+          theme: theme,
+          home: SplashScreen(),
+        );
+      },
     );
   }
 }

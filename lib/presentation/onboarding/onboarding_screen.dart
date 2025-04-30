@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_music_app/core/config/assets/app_constants.dart';
-import 'package:my_music_app/home.dart';
+import 'package:my_music_app/presentation/choose%20mode/choose_mode_page.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -38,7 +38,7 @@ class OnboardingScreen extends StatelessWidget {
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
-                  fontSize: 18,
+                  fontSize: 25,
                 ),
               ),
               SizedBox(height: 21),
@@ -58,11 +58,11 @@ class OnboardingScreen extends StatelessWidget {
                 ),
               ),
               ElevatedButton(
-                style: ElevatedButton.styleFrom(minimumSize: Size(300, 50)),
+                style: ElevatedButton.styleFrom(minimumSize: Size(330, 100)),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Home()),
+                    MaterialPageRoute(builder: (context) => ChooseModePage()),
                   );
                 },
                 child: Text(
