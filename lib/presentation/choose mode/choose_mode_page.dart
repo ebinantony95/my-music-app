@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:my_music_app/core/config/assets/app_constants.dart';
 
-import 'package:my_music_app/home.dart';
+import 'package:my_music_app/presentation/auth/register_signin_page.dart';
 import 'package:my_music_app/presentation/choose%20mode/bloc/theme_cubit.dart';
 
 class ChooseModePage extends StatelessWidget {
@@ -113,7 +113,9 @@ class ChooseModePage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Home()),
+                    MaterialPageRoute(
+                      builder: (context) => RegisterSigninPage(),
+                    ),
                   );
                 },
                 child: Text(

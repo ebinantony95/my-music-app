@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
           title: 'Bloc Theming App',
           theme: theme,
           home: SplashScreen(),
+          debugShowCheckedModeBanner: false,
         );
       },
     );

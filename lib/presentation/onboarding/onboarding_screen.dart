@@ -37,8 +37,8 @@ class OnboardingScreen extends StatelessWidget {
                 'Enjoy Listening to music',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
                   fontSize: 25,
+                  color: Colors.white,
                 ),
               ),
               SizedBox(height: 21),
