@@ -7,6 +7,15 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.lightBackground,
     brightness: Brightness.light,
     fontFamily: 'satoshi',
+    inputDecorationTheme: InputDecorationTheme(
+      hintStyle: TextStyle(color: Colors.grey),
+      fillColor: Colors.transparent,
+      contentPadding: EdgeInsets.all(35),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(40),
+        borderSide: BorderSide(color: Colors.black, width: 0.5),
+      ),
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.primary,
@@ -21,6 +30,15 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.darkBackground,
     brightness: Brightness.dark,
     fontFamily: 'satoshi',
+    inputDecorationTheme: InputDecorationTheme(
+      hintStyle: TextStyle(color: Colors.grey),
+      fillColor: Colors.transparent,
+      contentPadding: EdgeInsets.all(35),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(40),
+        borderSide: BorderSide(color: Colors.white, width: 0.5),
+      ),
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.primary,

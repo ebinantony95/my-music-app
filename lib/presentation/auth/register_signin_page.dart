@@ -3,6 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:my_music_app/common/helper/is_darkmode.dart';
 import 'package:my_music_app/core/config/assets/app_constants.dart';
 import 'package:my_music_app/core/config/theme/app_colors.dart';
+import 'package:my_music_app/presentation/auth/registerpage.dart';
+import 'package:my_music_app/presentation/auth/signin_page.dart';
+import 'package:my_music_app/presentation/choose%20mode/choose_mode_page.dart';
 
 class RegisterSigninPage extends StatelessWidget {
   const RegisterSigninPage({super.key});
@@ -12,6 +15,18 @@ class RegisterSigninPage extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
+          AppBar(
+            backgroundColor: Colors.transparent,
+            leading: IconButton(
+              onPressed: () {
+                Navigator.pop(
+                  context,
+                  MaterialPageRoute(builder: (context) => ChooseModePage()),
+                );
+              },
+              icon: Icon(Icons.arrow_back),
+            ),
+          ),
           Align(
             alignment: Alignment.topRight,
             child: SvgPicture.asset(topPatterns),
@@ -49,13 +64,27 @@ class RegisterSigninPage extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                             minimumSize: Size(150, 90),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Registerpage(),
+                              ),
+                            );
+                          },
                           child: Text('Register', style: TextStyle()),
                         ),
                       ),
                       Expanded(
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => SigninPage(),
+                              ),
+                            );
+                          },
                           style: TextButton.styleFrom(
                             minimumSize: Size(150, 90),
                           ),
