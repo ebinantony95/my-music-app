@@ -17,7 +17,7 @@ class SigninPage extends StatelessWidget {
             Align(
               alignment: Alignment.topCenter,
               child: Text(
-                'Register',
+                'Sign in',
                 style: TextStyle(
                   fontFamily: 'satoshi',
                   fontWeight: FontWeight.bold,
@@ -39,7 +39,7 @@ class SigninPage extends StatelessWidget {
                 );
               },
               child: Text(
-                'Create Account',
+                'Sign in',
                 style: TextStyle(fontFamily: 'satoshi', color: Colors.white),
               ),
             ),
